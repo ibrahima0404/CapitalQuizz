@@ -14,6 +14,17 @@
 		863562332095285D0004A8B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863562312095285D0004A8B9 /* LaunchScreen.storyboard */; };
 		8635623E2095285E0004A8B9 /* CapitalQuizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635623D2095285E0004A8B9 /* CapitalQuizzTests.swift */; };
 		863562492095285E0004A8B9 /* CapitalQuizzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863562482095285E0004A8B9 /* CapitalQuizzUITests.swift */; };
+		8635625C20952A7B0004A8B9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8635625B20952A7B0004A8B9 /* Default-568h@2x.png */; };
+		8635625D20952B180004A8B9 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 86356256209528F10004A8B9 /* Balham.otf */; };
+		8635626120952B8F0004A8B9 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635626020952B8F0004A8B9 /* QuestionView.swift */; };
+		863562632095324B0004A8B9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863562622095324B0004A8B9 /* Question.swift */; };
+		863562652095332A0004A8B9 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863562642095332A0004A8B9 /* Game.swift */; };
+		8635626720953E0C0004A8B9 /* QuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635626620953E0C0004A8B9 /* QuestionsManager.swift */; };
+		8635626E209542280004A8B9 /* HttpInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635626C209542280004A8B9 /* HttpInterface.swift */; };
+		8635626F209542280004A8B9 /* HttpInterfaceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635626D209542280004A8B9 /* HttpInterfaceWrapper.swift */; };
+		86356271209542AC0004A8B9 /* InterfaceResquest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86356270209542AC0004A8B9 /* InterfaceResquest.swift */; };
+		8637A9D12096739500C59FD5 /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8637A9D02096739500C59FD5 /* SVGKit.framework */; };
+		BBCD2A277F0BF464D770FACE /* Pods_CapitalQuizz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8E920BB30CE394C35D3459 /* Pods_CapitalQuizz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42EF1ED157D7D4B80D371132 /* Pods-CapitalQuizz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapitalQuizz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CapitalQuizz/Pods-CapitalQuizz.debug.xcconfig"; sourceTree = "<group>"; };
 		863562252095285A0004A8B9 /* CapitalQuizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapitalQuizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863562282095285A0004A8B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8635622A2095285A0004A8B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,18 @@
 		863562442095285E0004A8B9 /* CapitalQuizzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CapitalQuizzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		863562482095285E0004A8B9 /* CapitalQuizzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalQuizzUITests.swift; sourceTree = "<group>"; };
 		8635624A2095285E0004A8B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86356256209528F10004A8B9 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
+		8635625B20952A7B0004A8B9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8635626020952B8F0004A8B9 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		863562622095324B0004A8B9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		863562642095332A0004A8B9 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8635626620953E0C0004A8B9 /* QuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsManager.swift; sourceTree = "<group>"; };
+		8635626C209542280004A8B9 /* HttpInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpInterface.swift; sourceTree = "<group>"; };
+		8635626D209542280004A8B9 /* HttpInterfaceWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpInterfaceWrapper.swift; sourceTree = "<group>"; };
+		86356270209542AC0004A8B9 /* InterfaceResquest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceResquest.swift; sourceTree = "<group>"; };
+		8637A9D02096739500C59FD5 /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD990D13217F73BB5A7E17CD /* Pods-CapitalQuizz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CapitalQuizz.release.xcconfig"; path = "Pods/Target Support Files/Pods-CapitalQuizz/Pods-CapitalQuizz.release.xcconfig"; sourceTree = "<group>"; };
+		BF8E920BB30CE394C35D3459 /* Pods_CapitalQuizz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CapitalQuizz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8637A9D12096739500C59FD5 /* SVGKit.framework in Frameworks */,
+				BBCD2A277F0BF464D770FACE /* Pods_CapitalQuizz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +103,13 @@
 		8635621C2095285A0004A8B9 = {
 			isa = PBXGroup;
 			children = (
+				8635625B20952A7B0004A8B9 /* Default-568h@2x.png */,
 				863562272095285A0004A8B9 /* CapitalQuizz */,
 				8635623C2095285E0004A8B9 /* CapitalQuizzTests */,
 				863562472095285E0004A8B9 /* CapitalQuizzUITests */,
 				863562262095285A0004A8B9 /* Products */,
+				F5ACB1F058C332DCAE9B8321 /* Pods */,
+				F60CAA60F0CCAB10A6568896 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +126,10 @@
 		863562272095285A0004A8B9 /* CapitalQuizz */ = {
 			isa = PBXGroup;
 			children = (
-				863562282095285A0004A8B9 /* AppDelegate.swift */,
-				8635622A2095285A0004A8B9 /* ViewController.swift */,
-				8635622C2095285A0004A8B9 /* Main.storyboard */,
-				8635622F2095285D0004A8B9 /* Assets.xcassets */,
-				863562312095285D0004A8B9 /* LaunchScreen.storyboard */,
-				863562342095285D0004A8B9 /* Info.plist */,
+				8635625A20952A270004A8B9 /* Controler */,
+				8635625920952A060004A8B9 /* View */,
+				86356258209529FA0004A8B9 /* Model */,
+				86356257209529EA0004A8B9 /* Supporting Files */,
 			);
 			path = CapitalQuizz;
 			sourceTree = "<group>";
@@ -125,6 +152,66 @@
 			path = CapitalQuizzUITests;
 			sourceTree = "<group>";
 		};
+		86356257209529EA0004A8B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				863562282095285A0004A8B9 /* AppDelegate.swift */,
+				86356256209528F10004A8B9 /* Balham.otf */,
+				8635622F2095285D0004A8B9 /* Assets.xcassets */,
+				863562312095285D0004A8B9 /* LaunchScreen.storyboard */,
+				863562342095285D0004A8B9 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86356258209529FA0004A8B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8635626C209542280004A8B9 /* HttpInterface.swift */,
+				8635626D209542280004A8B9 /* HttpInterfaceWrapper.swift */,
+				863562622095324B0004A8B9 /* Question.swift */,
+				863562642095332A0004A8B9 /* Game.swift */,
+				8635626620953E0C0004A8B9 /* QuestionsManager.swift */,
+				86356270209542AC0004A8B9 /* InterfaceResquest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8635625920952A060004A8B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8635622C2095285A0004A8B9 /* Main.storyboard */,
+				8635626020952B8F0004A8B9 /* QuestionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8635625A20952A270004A8B9 /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				8635622A2095285A0004A8B9 /* ViewController.swift */,
+			);
+			path = Controler;
+			sourceTree = "<group>";
+		};
+		F5ACB1F058C332DCAE9B8321 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42EF1ED157D7D4B80D371132 /* Pods-CapitalQuizz.debug.xcconfig */,
+				BD990D13217F73BB5A7E17CD /* Pods-CapitalQuizz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F60CAA60F0CCAB10A6568896 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8637A9D02096739500C59FD5 /* SVGKit.framework */,
+				BF8E920BB30CE394C35D3459 /* Pods_CapitalQuizz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8635624D2095285E0004A8B9 /* Build configuration list for PBXNativeTarget "CapitalQuizz" */;
 			buildPhases = (
+				00DEC3A47B49032B583433A9 /* [CP] Check Pods Manifest.lock */,
 				863562212095285A0004A8B9 /* Sources */,
 				863562222095285A0004A8B9 /* Frameworks */,
 				863562232095285A0004A8B9 /* Resources */,
+				05CDB3901A08E61AC2D0DFE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +319,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				863562332095285D0004A8B9 /* LaunchScreen.storyboard in Resources */,
+				8635625C20952A7B0004A8B9 /* Default-568h@2x.png in Resources */,
+				8635625D20952B180004A8B9 /* Balham.otf in Resources */,
 				863562302095285D0004A8B9 /* Assets.xcassets in Resources */,
 				8635622E2095285A0004A8B9 /* Main.storyboard in Resources */,
 			);
@@ -251,13 +342,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00DEC3A47B49032B583433A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CapitalQuizz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		05CDB3901A08E61AC2D0DFE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CapitalQuizz/Pods-CapitalQuizz-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVGKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CapitalQuizz/Pods-CapitalQuizz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		863562212095285A0004A8B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8635622B2095285A0004A8B9 /* ViewController.swift in Sources */,
+				863562652095332A0004A8B9 /* Game.swift in Sources */,
+				863562632095324B0004A8B9 /* Question.swift in Sources */,
+				8635626720953E0C0004A8B9 /* QuestionsManager.swift in Sources */,
+				8635626120952B8F0004A8B9 /* QuestionView.swift in Sources */,
 				863562292095285A0004A8B9 /* AppDelegate.swift in Sources */,
+				86356271209542AC0004A8B9 /* InterfaceResquest.swift in Sources */,
+				8635626E209542280004A8B9 /* HttpInterface.swift in Sources */,
+				8635626F209542280004A8B9 /* HttpInterfaceWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +567,12 @@
 		};
 		8635624E2095285E0004A8B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42EF1ED157D7D4B80D371132 /* Pods-CapitalQuizz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 888QW669L8;
-				INFOPLIST_FILE = CapitalQuizz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CapitalQuizz/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,11 +586,12 @@
 		};
 		8635624F2095285E0004A8B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD990D13217F73BB5A7E17CD /* Pods-CapitalQuizz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 888QW669L8;
-				INFOPLIST_FILE = CapitalQuizz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CapitalQuizz/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
