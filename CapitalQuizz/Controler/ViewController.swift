@@ -25,6 +25,37 @@ class ViewController: UIViewController {
         startGame()
     }
     
+    @IBAction func didTouchButton1(_ sender: Any) {
+        if game.state == .going {
+            let answer = game.answserToQuestion(with: buttonAnswer1.title(for: .normal)!)
+            animationQuestion(answer: answer, button: buttonAnswer1)
+        }else {
+            presentAlertGameOver()
+        }
+    }
+    
+    @IBAction func didTouchButton2(_ sender: Any) {
+        if game.state == .going {
+            let answer = game.answserToQuestion(with: buttonAnswer2.title(for: .normal)!)
+            animationQuestion(answer: answer, button: buttonAnswer2)
+        }else {
+            presentAlertGameOver()
+        }
+    }
+    
+    @IBAction func didTouchButton3(_ sender: Any) {
+        if game.state == .going {
+            let answer = game.answserToQuestion(with: buttonAnswer3.title(for: .normal)!)
+            animationQuestion(answer: answer, button: buttonAnswer3)
+        }else {
+            presentAlertGameOver()
+        }
+    }
+    
+}
+
+extension ViewController {
+    
     func startGame() {
         self.questionView.isHidden = true
         buttonAnswer1.isHidden = true
@@ -57,21 +88,6 @@ class ViewController: UIViewController {
         self.questionView.img = (img?.uiImage)!
     }
     
-    @IBAction func didTouchButton1(_ sender: Any) {
-        let answer = game.answserToQuestion(with: buttonAnswer1.title(for: .normal)!)
-        animationQuestion(answer: answer, button: buttonAnswer1)
-    }
-    
-    @IBAction func didTouchButton2(_ sender: Any) {
-        let answer = game.answserToQuestion(with: buttonAnswer2.title(for: .normal)!)
-        animationQuestion(answer: answer, button: buttonAnswer2)
-    }
-    
-    @IBAction func didTouchButton3(_ sender: Any) {
-        let answer = game.answserToQuestion(with: buttonAnswer3.title(for: .normal)!)
-        animationQuestion(answer: answer, button: buttonAnswer3)
-    }
-    
     private func animationQuestion(answer: Bool, button: UIButton) {
         let bgColor = button.backgroundColor
         if answer {
@@ -101,8 +117,21 @@ class ViewController: UIViewController {
                 self.questionView.transform = .identity
             }, completion: nil)
         }
-        
-    
     }
 }
 
+extension ViewController {
+    func presentAlertGameOver() {
+        let alert = UIAlertController(title: "Game Over", message: "Start a new game ?", preferredStyle:.alert)
+        let yes = UIAlertAction(title: "Yes", style: .default, handler: { (aler) in
+            self.startGame()
+        })
+        let no = UIAlertAction(title: "No", style: .default, handler: nil)
+        alert.addAction(yes)
+        alert.addAction(no)
+        present(alert, animated: true, completion: nil)
+    }
+    
+
+    
+}

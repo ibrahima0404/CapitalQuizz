@@ -49,7 +49,7 @@ class Game {
     //MARK: - start new game part
    func newGame() {
         state = .going
-        currentIndex = 0
+        currentIndex = 245
         QuestionsManager.shared.getCountries { countries in
             self.questions = countries
             let name = Notification.Name(rawValue: "QuestionLoaded")
