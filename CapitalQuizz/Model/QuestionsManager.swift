@@ -32,7 +32,6 @@ class QuestionsManager: InterfaceResquest {
             DispatchQueue.main.async {
                  callback(json)
             }
-           
         }
     }
 }
