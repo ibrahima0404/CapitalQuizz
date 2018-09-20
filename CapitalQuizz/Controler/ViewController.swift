@@ -66,26 +66,31 @@ extension ViewController {
     }
     
     @objc func questionsLoaded() {
-        DispatchQueue.main.async {
+        //DispatchQueue.main.async {
             self.questionView.isHidden = false
             self.buttonAnswer1.isHidden = false
             self.buttonAnswer2.isHidden = false
             self.buttonAnswer3.isHidden = false
             self.spinner.isHidden = true
             self.nextQuestion()
-        }
+        //}
     }
     
     private func nextQuestion() {
-        self.questionView.title = "Capitale \(self.game.currentQuestion.name) ?"
-        self.buttonAnswer1.setTitle(self.game.answers[0], for: .normal)
-        self.buttonAnswer2.setTitle(self.game.answers[1], for: .normal)
-        self.buttonAnswer3.setTitle(self.game.answers[2], for: .normal)
-        let svgURL = URL(string: self.game.currentQuestion.flag)!
-        //let svgImage = SVGKImage(contentsOf: svgURL)
-        let data = NSData(contentsOf: svgURL)
-        let img = SVGKImage(data: data! as Data?)
-        self.questionView.img = (img?.uiImage)!
+        DispatchQueue.global().async {
+            let svgURL = URL(string: self.game.currentQuestion.flag)!
+            //let svgImage = SVGKImage(contentsOf: svgURL)
+            let data = NSData(contentsOf: svgURL)
+            let img = SVGKImage(data: data! as Data?)
+            DispatchQueue.main.async {
+                self.questionView.title = "Capitale \(self.game.currentQuestion.name) ?"
+                self.buttonAnswer1.setTitle(self.game.answers[0], for: .normal)
+                self.buttonAnswer2.setTitle(self.game.answers[1], for: .normal)
+                self.buttonAnswer3.setTitle(self.game.answers[2], for: .normal)
+                self.questionView.img = (img?.uiImage)!
+            }
+        }
+        
     }
     
     private func animationQuestion(answer: Bool, button: UIButton) {
