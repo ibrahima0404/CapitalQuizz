@@ -3,7 +3,9 @@
 This is a capital quizz game. 
 
 # Notes
+
 SVGKit: a pod dependance used to convert SVG url to UIImage
+
 REST COUNTRIES: Restful API which provides countries informations
 
 # Installation 
