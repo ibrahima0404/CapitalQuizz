@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,9 +24,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E20-7N-CmO" customClass="QuestionView" customModule="CapitalQuizz" customModuleProvider="target">
-                                <rect key="frame" x="27.5" y="80" width="265" height="144"/>
+                                <rect key="frame" x="27.5" y="98" width="265" height="144"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle set la capital du Sénégal ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4B6-W0-3Mq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quelle est la capital du Sénégal ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4B6-W0-3Mq">
                                         <rect key="frame" x="8" y="15" width="249" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="249" id="1z9-3e-wh8"/>
@@ -38,7 +37,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J6i-zF-jdT">
-                                        <rect key="frame" x="83" y="74" width="100" height="60"/>
+                                        <rect key="frame" x="82.5" y="74" width="100" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Vfy-fI-ulX"/>
                                             <constraint firstAttribute="width" constant="100" id="rSF-qf-m9y"/>
@@ -62,7 +61,7 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEU-e9-Xvu">
-                                <rect key="frame" x="35" y="284" width="250" height="50"/>
+                                <rect key="frame" x="35" y="302" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35294117650000001" green="0.41960784309999999" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="nO7-KW-Yur"/>
@@ -77,7 +76,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCw-dN-EQl">
-                                <rect key="frame" x="35" y="354" width="250" height="50"/>
+                                <rect key="frame" x="35" y="372" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35294117650000001" green="0.41960784309999999" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="NkY-Rm-uHX"/>
@@ -92,7 +91,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGg-L1-Of8">
-                                <rect key="frame" x="35" y="424" width="250" height="50"/>
+                                <rect key="frame" x="35" y="442" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35294117650000001" green="0.41960784309999999" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BaQ-A6-Jwh"/>
@@ -107,23 +106,34 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Swl-2I-Yge">
-                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <rect key="frame" x="150" y="292" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score 2 / 10 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1G-En-o4P">
+                                <rect key="frame" x="103.5" y="57" width="113" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="g7a-SQ-grC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.70980392160000005" green="0.72549019609999998" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Swl-2I-Yge" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="94c-Zm-Isi"/>
+                            <constraint firstItem="Swl-2I-Yge" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="18" id="94c-Zm-Isi"/>
                             <constraint firstItem="E20-7N-CmO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AgI-So-naT"/>
-                            <constraint firstItem="E20-7N-CmO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="B6b-ve-G7p"/>
+                            <constraint firstItem="E20-7N-CmO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="B6b-ve-G7p"/>
                             <constraint firstItem="LCw-dN-EQl" firstAttribute="top" secondItem="aEU-e9-Xvu" secondAttribute="bottom" constant="20" id="CRh-pw-yKd"/>
                             <constraint firstItem="LCw-dN-EQl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qd5-tY-syx"/>
                             <constraint firstItem="aEU-e9-Xvu" firstAttribute="top" secondItem="E20-7N-CmO" secondAttribute="bottom" constant="60" id="RXV-Ds-amr"/>
                             <constraint firstItem="VGg-L1-Of8" firstAttribute="width" secondItem="aEU-e9-Xvu" secondAttribute="width" id="SNd-ai-CRs"/>
                             <constraint firstItem="VGg-L1-Of8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TXD-jn-e9U"/>
                             <constraint firstItem="Swl-2I-Yge" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anA-O3-hG5"/>
+                            <constraint firstItem="E20-7N-CmO" firstAttribute="top" secondItem="v1G-En-o4P" secondAttribute="bottom" constant="20" id="dYn-Z5-CU4"/>
                             <constraint firstItem="aEU-e9-Xvu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kIj-C5-Tbd"/>
                             <constraint firstItem="LCw-dN-EQl" firstAttribute="width" secondItem="aEU-e9-Xvu" secondAttribute="width" id="l7i-7o-F6f"/>
                             <constraint firstItem="VGg-L1-Of8" firstAttribute="top" secondItem="LCw-dN-EQl" secondAttribute="bottom" constant="20" id="otj-CP-10P"/>
+                            <constraint firstItem="v1G-En-o4P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xsf-he-h2i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -131,13 +141,14 @@
                         <outlet property="buttonAnswer1" destination="aEU-e9-Xvu" id="kGg-30-cDG"/>
                         <outlet property="buttonAnswer2" destination="LCw-dN-EQl" id="pp7-ya-KoC"/>
                         <outlet property="buttonAnswer3" destination="VGg-L1-Of8" id="c9A-8N-Eoy"/>
+                        <outlet property="labelScore" destination="v1G-En-o4P" id="xFP-us-8N8"/>
                         <outlet property="questionView" destination="E20-7N-CmO" id="a7m-WU-ApQ"/>
                         <outlet property="spinner" destination="Swl-2I-Yge" id="Maj-zX-jnD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-254" y="-70"/>
+            <point key="canvasLocation" x="-255" y="-70.774647887323951"/>
         </scene>
     </scenes>
 </document>

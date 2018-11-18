@@ -14,15 +14,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonAnswer3: UIButton!
     @IBOutlet weak var questionView: QuestionView!
     
+    @IBOutlet weak var labelScore: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     var game = Game()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        questionView.isHidden = true
+        buttonAnswer1.isHidden = true
+        buttonAnswer2.isHidden = true
+        buttonAnswer3.isHidden = true
+        labelScore.isHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let name = Notification.Name("QuestionLoaded")
         NotificationCenter.default.addObserver(self, selector:#selector(questionsLoaded), name: name, object: nil)
-        
-        startGame()
+        getNumberOfQuestions()
     }
     
     @IBAction func didTouchButton1(_ sender: Any) {
@@ -61,8 +69,10 @@ extension ViewController {
         buttonAnswer1.isHidden = true
         buttonAnswer2.isHidden = true
         buttonAnswer3.isHidden = true
+        labelScore.isHidden = true
         spinner.isHidden = false
         game.newGame()
+        setScore()
     }
     
     @objc func questionsLoaded() {
@@ -71,6 +81,7 @@ extension ViewController {
             self.buttonAnswer1.isHidden = false
             self.buttonAnswer2.isHidden = false
             self.buttonAnswer3.isHidden = false
+            self.labelScore.isHidden = false
             self.spinner.isHidden = true
             self.nextQuestion()
         //}
@@ -83,7 +94,7 @@ extension ViewController {
             let data = NSData(contentsOf: svgURL)
             let img = SVGKImage(data: data! as Data?)
             DispatchQueue.main.async {
-                self.questionView.title = "Capitale \(self.game.currentQuestion.name) ?"
+                self.questionView.title = "Capital Of \(self.game.currentQuestion.name) ?"
                 self.buttonAnswer1.setTitle(self.game.answers[0], for: .normal)
                 self.buttonAnswer2.setTitle(self.game.answers[1], for: .normal)
                 self.buttonAnswer3.setTitle(self.game.answers[2], for: .normal)
@@ -96,6 +107,7 @@ extension ViewController {
     private func animationQuestion(answer: Bool, button: UIButton) {
         let bgColor = button.backgroundColor
         if answer {
+            self.setScore()
             button.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
             button.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
             let size = UIScreen.main.bounds.size
@@ -137,4 +149,24 @@ extension ViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func getNumberOfQuestions() {
+        let alert = UIAlertController(title: "Number Of Questions", message: "How many questions do you want ?", preferredStyle:.alert)
+        let fiveQuestions = UIAlertAction(title: "5", style: .default, handler: { (aler) in
+            self.game.numberOfQuestions = 5
+            self.startGame()
+        })
+        let tenQuestions = UIAlertAction(title: "10", style: .default, handler: { (aler) in
+            self.game.numberOfQuestions = 10
+            self.startGame()
+        })
+        alert.addAction(fiveQuestions)
+        alert.addAction(tenQuestions)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func setScore() {
+        labelScore.text = game.getScore()
+    }
 }

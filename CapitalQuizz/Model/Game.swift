@@ -19,6 +19,9 @@ class Game {
     private var questions = [Question]()
     private var currentIndex = 0
     var answers = [String]()
+    var numberOfQuestions = 5
+    private var score = 0;
+    
     
     var currentQuestion: Question {
         return questions[currentIndex]
@@ -28,6 +31,7 @@ class Game {
     func answserToQuestion(with answer: String)-> Bool {
         let ans = answer == currentQuestion.capital
         nextQuestion()
+        if ans { score += 1 }
         return ans
     }
     
@@ -49,9 +53,10 @@ class Game {
     //MARK: - start new game part
    func newGame() {
         state = .going
-        currentIndex = 245
+        currentIndex = 0
+        score = 0;
         QuestionsManager.shared.getCountries { countries in
-            self.questions = countries
+            self.setQuestions(countriesDict: countries)
             let name = Notification.Name(rawValue: "QuestionLoaded")
             let notification = Notification(name: name)
             NotificationCenter.default.post(notification)
@@ -64,9 +69,33 @@ class Game {
     private func getAnswers() {
         var array = questions
         array.remove(at: currentIndex)
-        let index1  = Int(arc4random_uniform(UInt32(array.count)))
-        let index2  = Int(arc4random_uniform(UInt32(array.count)))
-        answers = [currentQuestion.capital, array[index1].capital, array[index2].capital]
+        var index1: Int
+        var index2: Int
+        repeat {
+            index1  = Int(arc4random_uniform(UInt32(array.count)))
+            index2  = Int(arc4random_uniform(UInt32(array.count)))
+            answers = [currentQuestion.capital, array[index1].capital, array[index2].capital]
+        }while (index1 == index2)
+        
         answers = answers.sorted()
     }
+    
+    private func setQuestions(countriesDict: Array<Question>) {
+        var countries = countriesDict
+        //Because in the API response there are some countries where capital name is empty
+        countries.removeAll { ($0.capital .isEmpty)}
+        let size = countries.count - 1;
+        var index  = Int(arc4random_uniform(UInt32(size)))
+        if (index + numberOfQuestions) > size {
+            index = index - numberOfQuestions;
+        }
+        let temp = countries[index...(index + numberOfQuestions)]
+        self.questions = Array(temp)
+    }
+    
+    func getScore() -> String {
+        return ("\(score) / \(numberOfQuestions)")
+    }
 }
+
+
