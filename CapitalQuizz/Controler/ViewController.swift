@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         buttonAnswer2.isHidden = true
         buttonAnswer3.isHidden = true
         labelScore.isHidden = true
+        self.buttonAnswer1.setTitle("", for: .normal)
+        self.buttonAnswer2.setTitle("", for: .normal)
+        self.buttonAnswer3.setTitle("", for: .normal)
     }
     
     override func viewDidLoad() {
@@ -84,6 +87,7 @@ extension ViewController {
             self.labelScore.isHidden = false
             self.spinner.isHidden = true
             self.nextQuestion()
+        
         //}
     }
     
